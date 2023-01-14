@@ -2,10 +2,14 @@
     margin: 0;
 }
 /* header style */
+body{
+    position: relative;
+}
 header{
     background-color: #9b9494;
 }
 nav{
+    margin: 0 10%;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -34,13 +38,178 @@ ul li a{
 /* BANNER STYLE */
  
 .banner-container{
-    background-image: url('asset/image/background.jpg');
+    background-image: url('asset/image/background.jpg'), linear-gradient(rgba(0,0,0,0.4), rgba(0,0, 0,0.4));
+    background-blend-mode: overlay;
     width: 100%;
     height: 100vh;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.banner-description-title{
+   width: 50%;
+   
+}
+.banner-title{
+    font-size: 80px;
+    font-weight: 800;
+    color: #fff;
+}
+.banner-title>span{
+    color: red;
+}
+.banner-description{
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff; 
+    padding: 10px 0;
+}
+.banner-btn{
+    padding: 15px 40px;
+   
+    margin: 10px;
+ font-size: 18px;
+ border: none;
+ font-weight: 500;
+
+}
+.btn-discover{
+    color: #fff;
+    background-color: red;
+}
+.btn-hire{
+    color: red;
+    background-color: #ffffff;
 }
 
+
+
+/* footer style */
+
+.section-footer{
+    padding-top: 100px;
+    display: flex;
+    background-color: #0e0d0d;
+    padding: 100px 5%;
+
+}
+
+
+
+.footer-left-side{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+ .btn-service{
+ background-color: #ffffff;
+ width: 150px;
+ padding: 15px 0;
+ border: none;
+ border-radius: 30%;
+ font-size: 18px;
+ font-weight: 600;
+ color: #9b9494;
+ }
+ .service-title{
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+    margin: 10px 0;
+}
+.service-title>span{
+    color: red;
+}
+
+.service-description{
+    padding-right: 55%;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+.footer-li{
+    font-size: 18px;
+   
+}
+
+ .about-me-btn{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 50px;
+ }
+ .about-me{
+    
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-right: 20px;
+     border-right: 2px solid red;
+ }
+.about-me img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.person-name{
+    font-size: 15px;
+}
+.btn-more{
+    margin-left: 20px;
+}
+.footer-right-side{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.icon-box{
+    width: 200px;
+    height: 200px;
+     display: flex;
+    flex-direction: column;
+     padding-top: 10px;
+    align-items: center;
+    background-color: #ffffff;
+    margin: 5px;
+    border-radius: 10px;
+}
+.icon-img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+.icon-img>img{
+    width: 100%;
+    height: 100%;
+}
+
+/* responsive */
 @media only screen and (max-width: 600px){
+    .banner-container{
+        background-position: center; /* Center the image */
+  
+        
+    }
     .logu{
         display: none;
+    }
+    .section-footer{
+        
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+    .footer-left-side{
+        align-items: center;
+        text-align: center;
+    }
+    .service-description{
+        padding-right: 0;
+        
+    }
+    .footer-right-side{
+      
     }
 } 
